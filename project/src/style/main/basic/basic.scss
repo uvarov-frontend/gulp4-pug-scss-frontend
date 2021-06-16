@@ -16,6 +16,7 @@ body {
   color: $black;
   background: $white;
   min-height: 100vh;
+  max-width: 100vw;
   font-family: $font;
   font-weight: 400;
   overflow-x: hidden;
@@ -64,6 +65,7 @@ input[type='submit'] {
   cursor: pointer;
 }
 
+address,
 i {
   font-style: normal;
 }

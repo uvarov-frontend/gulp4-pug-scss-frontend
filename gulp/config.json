@@ -67,7 +67,12 @@
         "project/src/js/main/**/*.js",
         "!project/src/js/main/**/_*.js"
       ],
-      "plugins": "project/src/js/plugins/**/*.js"
+      "plugins": "project/src/js/plugins/**/*.js",
+      "temp": [
+        "project/src/js/temp.js",
+        "project/src/js/main/**/*.js",
+        "!project/src/js/main/**/_*.js"
+      ]
     },
     "dest": {
       "main": "project/dest/js",
@@ -101,12 +106,6 @@
       "project/src/pug/*.pug",
       "!project/src/pug/_*.pug"
     ]
-  },
-  "temporal": {
-    "pug": {
-      "src": "project/src/pug/_temporal/*.pug",
-      "dest": "project/_temporal"
-    }
   },
   "release": {
     "html": {

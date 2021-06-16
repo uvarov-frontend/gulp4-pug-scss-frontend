@@ -1,5 +1,4 @@
 node_modules/*
-project/_temporal/*
 project/_sprite/*
 project/dest/*
 project/release/*

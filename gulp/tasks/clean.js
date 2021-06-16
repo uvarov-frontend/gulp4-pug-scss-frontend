@@ -4,6 +4,6 @@ module.exports = (gulp, plugins) => {
 
   return () => plugins.all(
     plugins.cache.clearAll(),
-    del([config.dir.dest, config.dir.release, config.dir.sprite, config.temporal.pug.dest]),
+    del([config.dir.dest, config.dir.release, config.dir.sprite]),
   );
 };

@@ -18,7 +18,6 @@ gulp.task('dest.final', gulp.series(
   gulp.parallel('js.plugins', 'style.plugins'),
   gulp.parallel('js.main', 'style.main'),
   gulp.parallel('files', 'img'),
-  gulp.parallel('temporal.final'),
   gulp.parallel('pug'),
   gulp.parallel('html.final'),
 ));
@@ -27,22 +26,18 @@ gulp.task('dest', gulp.series(
   gulp.parallel('clean'),
   gulp.parallel('sprite'),
   gulp.parallel('js.plugins', 'style.plugins'),
-  gulp.parallel('js.main', 'style.main'),
+  gulp.parallel('js.main.temp', 'style.main'),
   gulp.parallel('files', 'img'),
-  gulp.parallel('temporal'),
   gulp.parallel('pug'),
 ));
 
 gulp.task('default', gulp.series(
-  gulp.parallel('clean'),
-  gulp.parallel('sprite'),
-  gulp.parallel('js.plugins', 'style.plugins'),
-  gulp.parallel('js.main', 'style.main'),
-  gulp.parallel('files', 'img'),
-  gulp.parallel('temporal'),
-  gulp.parallel('pug'),
+  gulp.parallel('dest'),
   gulp.parallel('watch', 'server'),
 ));
 
-gulp.task('release.ftp', gulp.series('clean', 'dest', 'release', 'ftp', 'clean'));
-gulp.task('release.final', gulp.series('clean', 'dest.final', 'release', 'zip', 'clean'));
+gulp.task('dest.ftp', gulp.series('clean', 'dest', 'release', 'ftp', 'clean'));
+gulp.task('dest.zip', gulp.series('clean', 'dest', 'release', 'zip', 'clean'));
+
+gulp.task('release.ftp', gulp.series('clean', 'dest.final', 'release', 'ftp', 'clean'));
+gulp.task('release.zip', gulp.series('clean', 'dest.final', 'release', 'zip', 'clean'));
