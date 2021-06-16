@@ -12,19 +12,19 @@
 
 ## Список основных команд сборщика:
 
-Gulp | NPM | YARN | Описание
+Команда | Описание
 ----- | ----- | ----- | -----
-`gulp` | `npm run start` | `yarn start`  | Запустить сборщик проекта и livereload.
-`gulp dest` | `npm run dev` | `yarn dev` | Собрать проект "для локальной работы" в папку `project/dest`.
-`gulp release` | `npm run build` | `yarn build` | Пересобрать проект "для публикации верстки" из папки `project/dest` в папку `project/release`.
-`gulp dest.ftp` | `npm run dev ftp` | `yarn dev ftp` | Пересобрать проект "для публикации верстки" из папки `project/dest` в папку `project/release` и выгрузить по ftp.
-`gulp dest.zip` | `npm run dev zip` | `yarn dev zip` | Пересобрать проект "для публикации верстки" из папки `project/dest` в папку `project/release` и упаковать в zip архив.
-`gulp release.ftp` | `npm run build ftp` | `yarn build ftp` | Пересобрать проект "для продакшена" из папки `project/dest` в папку `project/release` и выгрузить по ftp.
-`gulp release.zip` | `npm run build zip` | `yarn build zip` | Пересобрать проект "для продакшена" из папки `project/dest` в папку `project/release` и упаковать в zip архив.
-`gulp clean` | `npm run clean` | `yarn clean`  | Удалить сгенерированные файлы.
-`gulp fonts` | `npm run fonts` | `yarn fonts` | Преобразовать шрифты в формате `.ttf` из папки `project/src/files/fonts/ttf` в формат `.woff .woff2` и поместить в папку `project/src/files/fonts`.
-`gulp tinypng` | `npm run tinypng` | `yarn tinypng` | Сжать изображения в формате `.png .jpg .jpeg` из папки `project/src/img/tinypng` через сервис TinyPNG и поместить в папку `project/src/img`.
-`gulp validator` | `npm run validator` | `yarn validator` | Проверить валидность HTML.
+`gulp` `npm run start` `yarn start` | Запустить сборщик проекта и livereload.
+`gulp dest` | Собрать проект "для локальной работы" в папку `project/dest`.
+`gulp release` | Пересобрать проект "для публикации верстки" из папки `project/dest` в папку `project/release`.
+`gulp dest.ftp` | Пересобрать проект "для публикации верстки" из папки `project/dest` в папку `project/release` и выгрузить по ftp.
+`gulp dest.zip` | Пересобрать проект "для публикации верстки" из папки `project/dest` в папку `project/release` и упаковать в zip архив.
+`gulp release.ftp` | Пересобрать проект "для продакшена" из папки `project/dest` в папку `project/release` и выгрузить по ftp.
+`gulp release.zip` | Пересобрать проект "для продакшена" из папки `project/dest` в папку `project/release` и упаковать в zip архив.
+`gulp clean` | Удалить сгенерированные файлы.
+`gulp fonts` | Преобразовать шрифты в формате `.ttf` из папки `project/src/files/fonts/ttf` в формат `.woff .woff2` и поместить в папку `project/src/files/fonts`.
+`gulp tinypng` | Сжать изображения в формате `.png .jpg .jpeg` из папки `project/src/img/tinypng` через сервис TinyPNG и поместить в папку `project/src/img`.
+`gulp validator` | Проверить валидность HTML.
 
 **Для запуска команды `gulp tinypng` в папке `/gulp` необходимо переименовать файл `_tinypng.json` в `tinypng.json` и отредактировать API key, получить его можно на официальном сайте [TinyPNG](https://tinypng.com/developers)**
 
