@@ -1,0 +1,133 @@
+{
+  "dir": {
+    "desktop": "../../",
+    "src": "project/src",
+    "dest": "project/dest",
+    "release": "project/release",
+    "sprite": "project/_sprite"
+  },
+  "files": "project/src/files/**/**/*.*",
+  "fonts": {
+    "convert": {
+      "src": "project/src/files/fonts/ttf/*.ttf",
+      "dest": "project/src/files/fonts"
+    }
+  },
+  "ftp": {
+    "src": "project/release/**/**/*"
+  },
+  "zip": {
+    "src": "project/release/**/**/*"
+  },
+  "img": {
+    "src": [
+      "project/src/img/**/**/*.{svg,png,gif,jpg,jpeg}",
+      "project/_sprite/img/**/**/*.{svg,png,gif,jpg,jpeg}",
+      "!project/src/img/_sprite/**/*.*"
+    ],
+    "dest": "project/dest/img",
+    "tinyPng": {
+      "src": "project/src/img/tinypng/**/**/*.{png,jpg,jpeg}",
+      "dest": "project/src/img"
+    }
+  },
+  "sprite": {
+    "svg": "project/src/img/_sprite/svg/*.svg",
+    "png": "project/src/img/_sprite/png/*.png",
+    "img": "project/_sprite/img",
+    "style": "project/_sprite/style",
+    "src": "project/src/img/_sprite",
+    "dest": "project/_sprite",
+    "mixin": {
+      "svg": "project/src/style/_sprite/sprite-svg-mixin.scss",
+      "png": "project/src/style/_sprite/sprite-png-mixin.scss",
+      "dest": "project/_sprite/style/mixin"
+    }
+  },
+  "inject": {
+    "src": {
+      "main": [
+        "project/dest/js/*.js",
+        "project/dest/css/*.css"
+      ],
+      "plugins": [
+        "project/dest/js/plugins/*.js",
+        "project/dest/css/plugins/*.css"
+      ],
+      "pluginsHead": [
+        "project/dest/js/plugins/head/*.js",
+        "project/dest/css/plugins/head/*.css"
+      ]
+    },
+    "remove": "../../dest/"
+  },
+  "js": {
+    "src": {
+      "main": [
+        "project/src/js/main/**/*.js",
+        "!project/src/js/main/**/_*.js"
+      ],
+      "plugins": "project/src/js/plugins/**/*.js"
+    },
+    "dest": {
+      "main": "project/dest/js",
+      "plugins": "project/dest/js/plugins"
+    }
+  },
+  "style": {
+    "src": {
+      "main": [
+        "project/_sprite/style/*.scss",
+        "project/_sprite/style/mixin/*.scss",
+        "project/src/style/mixin.scss",
+        "project/src/style/main/basic/fonts.scss",
+        "project/src/style/main/basic/variables.scss",
+        "project/src/style/main/basic/basic.scss",
+        "project/src/style/main/basic/animation.scss",
+        "project/src/style/main/basic/global.scss",
+        "project/src/style/main/optional/**/*.scss",
+        "!project/src/style/main/optional/**/_*.scss"
+      ],
+      "plugins": "project/src/style/plugins/**/*.scss"
+    },
+    "dest": {
+      "main": "project/dest/css",
+      "plugins": "project/dest/css/plugins"
+    }
+  },
+  "pug": {
+    "src": "project/src/pug",
+    "srcFile": [
+      "project/src/pug/*.pug",
+      "!project/src/pug/_*.pug"
+    ]
+  },
+  "temporal": {
+    "pug": {
+      "src": "project/src/pug/_temporal/*.pug",
+      "dest": "project/_temporal"
+    }
+  },
+  "release": {
+    "html": {
+      "src": "project/dest/*.html",
+      "dest": "project/release/"
+    },
+    "js": {
+      "src": "project/dest/js/**/**/*.js",
+      "dest": "project/release/js/"
+    },
+    "style": {
+      "src": "project/dest/css/**/**/*.css",
+      "dest": "project/release/css/"
+    },
+    "img": {
+      "src": "project/dest/img/**/**/*.*",
+      "dest": "project/release/img/"
+    },
+    "files": {
+      "src": "project/src/files/**/**/*.*",
+      "dest": "project/release/"
+    }
+  }
+}

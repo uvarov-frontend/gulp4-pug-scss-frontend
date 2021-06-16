@@ -1,0 +1,14 @@
+node_modules/*
+project/_temporal/*
+project/_sprite/*
+project/dest/*
+project/release/*
+*.zip
+*.rar
+*.psd
+*.sketch
+.DS_Store
+ftpconfig.json
+tinypng.json
+package-lock.json
+yarn.lock

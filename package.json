@@ -1,0 +1,63 @@
+{
+  "name": "gulp4-frontend-force-start",
+  "version": "5.1.0",
+  "description": "Инкрементальная сборка Gulp4 с использованием шаблонизатора  PUG препроцессора SCSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uvarov-frontend/gulp4-frontend-force-start.git"
+  },
+  "author": {
+    "name": "Yuri Uvarov",
+    "email": "uvarov.frontend@gmail.com"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "browser-sync": "^2.26.3",
+    "browserslist": "^4.6.1",
+    "caniuse-lite": "^1.0.30000971",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-add-files": "^1.0.0",
+    "gulp-all": "^1.1.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-filter": "^5.1.0",
+    "gulp-format-html": "^1.2.3",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-inject": "^5.0.5",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-tinypng-compress": "^1.2.1",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-w3c-html-validator": "^2.0.1",
+    "gulp-zip": "^5.0.2",
+    "gulp.spritesmith": "^6.9.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "merge-stream": "^1.0.1",
+    "vinyl-ftp": "^0.6.1",
+    "yellfy-pug-inheritance": "^2.0.0"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 2%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

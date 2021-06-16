@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include global/head
+	+head(
+		'Главная страница'
+	)
+	body
+		.wrapper
+			//- Header
+			include global/header
+
+			//- Блоки
+			main.main
+
+			//- Footer
+			include global/footer
+
+		//- Скрипты
+		include global/scripts
+
+		//- Временно подключенные блоки для разработки
+		include ../../_temporal/temporal.pug
