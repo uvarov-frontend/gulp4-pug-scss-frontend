@@ -3,6 +3,7 @@ module.exports = (gulp, plugins, browser) => {
   const pugInheritance = require('yellfy-pug-inheritance');
   const formatHtml = require('gulp-format-html');
   const pugbem = require("../plugins/pugbem.js");
+  pugbem.b = true;
   let pugInheritanceCache = {};
 
   function pugFilter(file, inheritance) {
@@ -27,7 +28,8 @@ module.exports = (gulp, plugins, browser) => {
         .pipe(plugins.pug({
           self: true,
           cache: true,
-          pretty: true
+          pretty: true,
+          plugins: [pugbem],
         }))
         .pipe(plugins.inject(gulp.src(config.inject.src.pluginsHead, { read: false }), { ignorePath: config.inject.remove, relative: true, starttag: '<!-- inject:pluginsHead:{{ext}} -->' }))
         .pipe(plugins.inject(gulp.src(config.inject.src.plugins, { read: false }), { ignorePath: config.inject.remove, relative: true, starttag: '<!-- inject:plugins:{{ext}} -->' }))

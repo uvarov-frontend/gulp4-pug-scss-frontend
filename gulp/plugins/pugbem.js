@@ -20,7 +20,6 @@ function pugbem(tokens) {
     separator_elem = this.e || '__',
     separator_mod = this.m || '_';
 
-  this.b = true;
   if (this.b === true) prefix_block = 'b-';
   else if (this.b) prefix_block = this.b;
 

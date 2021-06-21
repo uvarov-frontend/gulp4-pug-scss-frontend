@@ -11,15 +11,19 @@ module.exports = (gulp, plugins) => {
     gulp
       .src(config.release.js.src)
       .pipe(plugins.plumber())
+      .pipe(
+        plugins.babel({
+          presets: ['@babel/env'],
+        }),
+      )
+      .pipe(plugins.concat('main.js'))
       .pipe(gulp.dest(config.release.js.dest)),
     // style
     gulp
       .src(config.release.style.src)
       .pipe(plugins.plumber())
-      .pipe(
-        plugins.autoprefixer(),
-      )
-      .pipe(plugins.csscomb())
+      .pipe(plugins.cssmin())
+      .pipe(plugins.cssbeautify())
       .pipe(gulp.dest(config.release.style.dest)),
     // img
     gulp

@@ -4,9 +4,11 @@ module.exports = (gulp, plugins, browser) => {
   return () => gulp
     .src(config.style.src.main)
     .pipe(plugins.plumber())
-    .pipe(plugins.concat('main.css'))
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.concat('main'))
     .pipe(plugins.sass())
-    .pipe(plugins.csscomb())
+    .pipe(plugins.autoprefixer())
+    .pipe(plugins.sourcemaps.write())
     .on('error', plugins.notify.onError(error => `Error: ${error.message}`))
     .pipe(gulp.dest(config.style.dest.main))
     .pipe(browser.stream())

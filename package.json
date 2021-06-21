@@ -1,6 +1,6 @@
 {
   "name": "gulp4-frontend-force-start",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Инкрементальная сборка Gulp4 с использованием шаблонизатора  PUG препроцессора SCSS",
   "repository": {
     "type": "git",
@@ -28,7 +28,8 @@
     "gulp-babel": "^8.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-csscomb": "^3.0.8",
+    "gulp-cssbeautify": "^3.0.0",
+    "gulp-cssmin": "^0.2.0",
     "gulp-filter": "^5.1.0",
     "gulp-format-html": "^1.2.3",
     "gulp-html-minifier": "^0.1.8",
@@ -41,6 +42,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-tinypng-compress": "^1.2.1",
     "gulp-ttf2woff": "^1.1.1",

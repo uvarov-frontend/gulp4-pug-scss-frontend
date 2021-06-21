@@ -1,9 +1,12 @@
+//- Миксины
+include global/head
+
 <!DOCTYPE html>
 html(lang="ru")
-	include global/head
-	+head(
-		'Главная страница'
-	)
+	head
+		+head(
+			'Главная страница'
+		)
 	body
 		.wrapper
 			//- Header
@@ -11,6 +14,8 @@ html(lang="ru")
 
 			//- Блоки
 			main.main
+				.b-block
+					.__item._type
 
 			//- Footer
 			include global/footer
