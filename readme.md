@@ -72,19 +72,6 @@
 @include font('ProximaNova', 'ProximaNova-Regular', fallback, '300', 'normal');
 ```
 
-**БЭМ SCSS:**
-
-```scss
-.block {                          // .block
-  @include e('element') {         // .block__element
-    @include m('modifier') {}     // .block__element_modifier
-  }
-  @include m('modifier') {        // .block_modifier
-    @include e('element') {}      // .block_modifier__element
-  }
-}
-```
-
 **Cпрайты PNG:**
 
 ```scss
