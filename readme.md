@@ -77,7 +77,7 @@
 ```scss
 .sprite-png {
   display: inline-block;
-  @include sprite($address); // Для использования такого микисна, в папке project/src/img/_sprite/png должен лежать файл address.png
+  @include sprite($address); // Для использования этого миксина, в папке project/src/img/_sprite/png должен лежать файл address.png
 }
 ```
 
@@ -87,7 +87,7 @@
 .sprite-svg {
   font-size: 16px;
   display: inline-block;
-  @include spriteSvg(address); // Для использования такого микисна, в папке project/src/img/_sprite/svg должен лежать файл address.svg
+  @include spriteSvg(address); // Для использования этого миксина, в папке project/src/img/_sprite/svg должен лежать файл address.svg
 
   &:hover {
     @include spriteSvg(addressHover, bg);
