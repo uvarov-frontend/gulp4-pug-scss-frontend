@@ -2,7 +2,7 @@ module.exports = (gulp, plugins, browser) => {
   const config = require('../config');
 
   return () => gulp
-    .src(config.js.src.main)
+    .src(config.js.src.temp)
     .pipe(plugins.plumber())
     .pipe(
       plugins.babel({
