@@ -127,6 +127,10 @@
     "files": {
       "src": "project/src/files/**/**/*.*",
       "dest": "project/release/"
+    },
+    "temp": {
+      "src": "project/dest/temp/**/**/*.*",
+      "dest": "project/release/temp/"
     }
   }
 }

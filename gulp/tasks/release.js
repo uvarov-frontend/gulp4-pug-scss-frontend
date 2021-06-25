@@ -29,5 +29,7 @@ module.exports = (gulp, plugins) => {
       .pipe(gulp.dest(config.release.img.dest)),
     // files
     gulp.src(config.release.files.src).pipe(gulp.dest(config.release.files.dest)),
+    // temp
+    gulp.src(config.release.temp.src).pipe(gulp.dest(config.release.temp.dest)),
   )
 };
