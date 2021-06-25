@@ -31,8 +31,8 @@ gulp.task('default', gulp.series(
   gulp.parallel('watch', 'server')
 ));
 
-gulp.task('dest.ftp', gulp.series('clean', 'dest', 'temp', 'release', 'ftp', 'clean'));
-gulp.task('dest.zip', gulp.series('clean', 'dest', 'temp', 'release', 'zip', 'clean'));
+gulp.task('dest.ftp', gulp.series('clean', 'temp', 'dest', 'release', 'ftp', 'clean'));
+gulp.task('dest.zip', gulp.series('clean', 'temp', 'dest', 'release', 'zip', 'clean'));
 
 gulp.task('release.ftp', gulp.series('clean', 'dest', 'release', 'ftp', 'clean'));
 gulp.task('release.zip', gulp.series('clean', 'dest', 'release', 'zip', 'clean'));
