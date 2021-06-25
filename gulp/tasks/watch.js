@@ -1,10 +1,9 @@
 module.exports = (gulp) => {
   return () => {
     global.watch = true;
-    gulp.watch(['project/src/pug/**/*.pug'], { usePolling: true }, gulp.series('pug'))
-      .on('all', (event, filepath) => {
-        global.changedTempalteFile = filepath.replace(/\\/g, '/');
-      });
+    gulp.watch('project/src/pug/**/*.pug', gulp.series('pug')).on('all', (event, filepath) => {
+      global.emittyChangedFile = filepath;
+    });
     gulp.watch(['project/src/js/main/**/**/*.js'], { usePolling: true }, gulp.series('js.main'));
     gulp.watch(['project/src/js/plugins/**/**/*.js'], { usePolling: true }, gulp.series('js.plugins'));
     gulp.watch(['project/src/js/temp/**/**/*.js'], { usePolling: true }, gulp.series('js.temp'));

@@ -101,7 +101,7 @@
     }
   },
   "pug": {
-    "src": "project/src/pug/pages",
+    "src": "project/src/pug",
     "srcFile": [
       "project/src/pug/pages/*.pug",
       "!project/src/pug/pages/_*.pug"
