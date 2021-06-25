@@ -1,7 +1,7 @@
 {
   "name": "gulp4-frontend-force-start",
   "version": "5.1.4",
-  "description": "Инкрементальная сборка Gulp4 с использованием шаблонизатора  PUG препроцессора SCSS",
+  "description": "Инкрементальная сборка Gulp4 с использованием шаблонизатора PUG препроцессора SCSS",
   "repository": {
     "type": "git",
     "url": "https://github.com/uvarov-frontend/gulp4-frontend-force-start.git"
