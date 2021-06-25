@@ -57,9 +57,10 @@
       "pluginsHead": [
         "project/dest/js/plugins/head/*.js",
         "project/dest/css/plugins/head/*.css"
-      ]
+      ],
+      "temp": "project/dest/temp/*.{js,css}"
     },
-    "remove": "../../dest/"
+    "remove": "../../../dest/"
   },
   "js": {
     "src": {
@@ -68,15 +69,12 @@
         "!project/src/js/main/**/_*.js"
       ],
       "plugins": "project/src/js/plugins/**/*.js",
-      "temp": [
-        "project/src/js/temp.js",
-        "project/src/js/main/**/*.js",
-        "!project/src/js/main/**/_*.js"
-      ]
+      "temp": "project/src/js/temp/**/*.js"
     },
     "dest": {
       "main": "project/dest/js",
-      "plugins": "project/dest/js/plugins"
+      "plugins": "project/dest/js/plugins",
+      "temp": "project/dest/temp"
     }
   },
   "style": {
@@ -85,26 +83,28 @@
         "project/_sprite/style/*.scss",
         "project/_sprite/style/mixin/*.scss",
         "project/src/style/mixin.scss",
-        "project/src/style/main/basic/fonts.scss",
         "project/src/style/main/basic/variables.scss",
-        "project/src/style/main/basic/basic.scss",
+        "project/src/style/main/basic/fonts.scss",
         "project/src/style/main/basic/animation.scss",
+        "project/src/style/main/basic/basic.scss",
         "project/src/style/main/basic/global.scss",
-        "project/src/style/main/optional/**/*.scss",
-        "!project/src/style/main/optional/**/_*.scss"
+        "project/src/style/main/includes/**/*.scss",
+        "!project/src/style/main/includes/**/_*.scss"
       ],
-      "plugins": "project/src/style/plugins/**/*.scss"
+      "plugins": "project/src/style/plugins/**/*.scss",
+      "temp": "project/src/style/temp/**/*.scss"
     },
     "dest": {
       "main": "project/dest/css",
-      "plugins": "project/dest/css/plugins"
+      "plugins": "project/dest/css/plugins",
+      "temp": "project/dest/temp"
     }
   },
   "pug": {
-    "src": "project/src/pug",
+    "src": "project/src/pug/pages",
     "srcFile": [
-      "project/src/pug/*.pug",
-      "!project/src/pug/_*.pug"
+      "project/src/pug/pages/*.pug",
+      "!project/src/pug/pages/_*.pug"
     ]
   },
   "release": {

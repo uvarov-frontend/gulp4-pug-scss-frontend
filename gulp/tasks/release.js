@@ -1,11 +1,15 @@
 module.exports = (gulp, plugins) => {
   const config = require('../config');
+  const htmlmin = require('gulp-html-minifier');
+  const formatHtml = require('gulp-format-html');
 
   return () => plugins.all(
     // html
     gulp
       .src(config.release.html.src)
       .pipe(plugins.plumber())
+      .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+      .pipe(formatHtml())
       .pipe(gulp.dest(config.release.html.dest)),
     // js
     gulp

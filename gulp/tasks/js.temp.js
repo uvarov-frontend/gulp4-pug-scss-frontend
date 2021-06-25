@@ -4,11 +4,6 @@ module.exports = (gulp, plugins, browser) => {
   return () => gulp
     .src(config.js.src.temp)
     .pipe(plugins.plumber())
-    .pipe(
-      plugins.babel({
-        presets: ['@babel/env'],
-      }),
-    )
-    .pipe(gulp.dest(config.js.dest.main))
+    .pipe(gulp.dest(config.js.dest.temp))
     .pipe(browser.stream())
 };

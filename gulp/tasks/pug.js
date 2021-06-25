@@ -31,6 +31,7 @@ module.exports = (gulp, plugins, browser) => {
           pretty: true,
           plugins: [pugbem],
         }))
+        .pipe(plugins.inject(gulp.src(config.inject.src.temp, { read: false }), { ignorePath: config.inject.remove, relative: true, starttag: '<!-- inject:temp:{{ext}} -->' }))
         .pipe(plugins.inject(gulp.src(config.inject.src.pluginsHead, { read: false }), { ignorePath: config.inject.remove, relative: true, starttag: '<!-- inject:pluginsHead:{{ext}} -->' }))
         .pipe(plugins.inject(gulp.src(config.inject.src.plugins, { read: false }), { ignorePath: config.inject.remove, relative: true, starttag: '<!-- inject:plugins:{{ext}} -->' }))
         .pipe(plugins.inject(gulp.src(config.inject.src.main, { read: false }), { ignorePath: config.inject.remove, relative: true }))

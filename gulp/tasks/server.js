@@ -8,6 +8,6 @@ module.exports = (gulp, plugins, browser) => {
     port: 8080,
     open: true,
     notify: false,
-    // tunnel: 'live-layout'
+    // tunnel: 'uvarov-frontend-odds'
   });
 };

@@ -1,0 +1,49 @@
+//- Mixins
+include ../includes/mixin/mixin
+
+//- Variables
+block variables
+
+doctype html
+html(lang="ru")
+
+	//- Head
+	head
+		meta(charset="utf-8")
+		title= title
+		meta(name="keywords" content="keywords")
+		meta(name="description" content="description")
+		meta(name="viewport" content="initial-scale=1.0, width=device-width")
+		meta(name="format-detection" content="telephone=no")
+		link(rel="shortcut icon" sizes="16x16" href="favicon.ico" type="image/x-icon")
+		<!--inject:temp:css-->
+		<!--endinject-->
+		<!--inject:pluginsHead:css-->
+		<!--endinject-->
+		<!--inject:plugins:css-->
+		<!--endinject-->
+		<!--inject:css-->
+		<!--endinject-->
+		block head
+
+	body
+		.wrapper
+			//- Header
+			include ../includes/global/header
+
+			//- Content
+			main.main
+				block content
+
+			//- Footer
+			include ../includes/global/footer
+
+		//- Scripts
+		<!--inject:temp:js-->
+		<!--endinject-->
+		<!--inject:pluginsHead:js-->
+		<!--endinject-->
+		<!--inject:plugins:js-->
+		<!--endinject-->
+		<!--inject:js-->
+		<!--endinject-->
